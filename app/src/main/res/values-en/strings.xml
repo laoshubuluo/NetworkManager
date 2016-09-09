@@ -1,6 +1,6 @@
 <resources>
     <!--公共部分-->
-    <string name="app_name">NetworkManager</string>
+    <string name="app_name">NMS</string>
 
     <string name="loading">loading</string>
     <string name="loading_error">loading error</string>
