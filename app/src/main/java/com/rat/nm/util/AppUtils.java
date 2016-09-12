@@ -171,23 +171,20 @@ public class AppUtils {
     /**
      * 保存用户的environment
      *
-     * @param environment
+     * @param eNew
      */
-    public void setUserEnvironment(Environment environment) {
-        if (null == environment || null == environment.getList())
+    public void setUserEnvironment(Environment eNew) {
+        if (null == eNew || null == eNew.getList())
             return;
         Environment eOld = getUserEnvironment();
-        // 历史环境为空则更新新的
-        if (StringUtils.isNullOrBlank(eOld.getCurrent())) {
-            setUserEnvironment4Update(environment);
-            return;
+        // 如果旧配置已选的属性，存在于新配置的列表中，则更新
+        for (String s : eNew.getList()) {
+            if (eOld.getCurrent().equals(s)) {
+                eNew.setCurrent(s);
+                break;
+            }
         }
-        // 历史环境不在新列表中则更新新的
-        for (String s : environment.getList()) {
-            if (eOld.getCurrent().equals(s))
-                return;
-        }
-        setUserEnvironment4Update(environment);
+        setUserEnvironment4Update(eNew);
     }
 
     /**

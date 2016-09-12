@@ -82,7 +82,7 @@
 
     <string name="search_commit">please input device name</string>
 
-    <string name="remeber_me">Remeber Me</string>
+    <string name="remeber_me">Remember Me</string>
     <string name="receive_push_message">Receive Push Message</string>
     <string name="operate_environment">Operate Environment</string>
     <string name="server_ip">Server IP</string>
