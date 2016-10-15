@@ -119,6 +119,9 @@ public class AlarmFilterActivity extends BaseActivity {
                 LogUtil.i("selectedIndex: " + selectedIndex + ", item: " + item);
                 if (1 != selectedIndex) { // 非选中All
                     controller.getList(0, 0, DataGetType.UPDATE, item, "");
+                } else {
+                    deviceList = new ArrayList<Device>();
+                    initDeviceNameData();
                 }
             }
         });
