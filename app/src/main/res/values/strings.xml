@@ -59,6 +59,7 @@
     <string name="login_error">登录异常</string>
     <string name="user_name_is_null">用户名不能为空</string>
     <string name="password_is_null">密码不能为空</string>
+    <string name="login_error_message">登录失败，请检查您的账号密码</string>
 
     <!--其他-->
     <string name="device_colon">设备: </string>

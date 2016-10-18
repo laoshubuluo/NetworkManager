@@ -42,7 +42,6 @@ public class AlarmListActivity extends BaseActivity implements AdapterView.OnIte
     @ViewInject(R.id.countLL)
     private LinearLayout countLL;
 
-
     private List<Alarm> alarmList = new ArrayList<Alarm>();
     private int totalPage = 0;
     private int currentPage = 0;

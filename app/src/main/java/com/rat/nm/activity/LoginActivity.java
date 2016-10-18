@@ -98,6 +98,9 @@ public class LoginActivity extends Activity implements Handler.Callback, View.On
             case MessageSignConstant.LOGIN_FAILURE:
                 int code = msg.getData().getInt("code");
                 String message = msg.getData().getString("message");
+                // 账号密码错误，提示语客户端定义
+                if (5 == code)
+                    message = getString(R.string.login_error_message);
                 // 检查token是否失效
                 if (UserUtils.getInstance(LoginActivity.this).isTokenError(code, message))
                     break;
